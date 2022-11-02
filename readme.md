@@ -6737,3 +6737,17 @@ Amazon S3 같은 다른 AWS 서비스가
   - https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html
     - 불변 인프라
       - https://blog.leocat.kr/notes/2018/09/01/translation-what-is-immutable-infrastructure
+
+- 개발자는 특정 IAM 사용자의 자격 증명을 사용하도록 AWS CLI 를 구성합니다.
+  - https://docs.aws.amazon.com/cli/latest/reference/dynamodb/get-item.html
+- 애플리케이션이 AWS 로 이동되어 ALB 뒤에 배치되었습니다.
+  그러나 이제 모든 클라이언트 IP 주소가 동일한 것으로 나타납니다.
+  애플리케이션은 수평으로 확장할 수 있는 기능을 유지해야 합니다.
+  X-Forwarded-For 헤더 검사를 하도록 한다.
+  - https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/x-forwarded-headers.html#x-forwarded-for
+- 애플리케이션은 연결된 Amazon EBS 디스크를 사용하여 데이터를 저장합니다.
+  애플리케이션은 민감한 정보를 처리하며 모든 데이터는 암호화되어야 합니다.
+  성늘에 영향을 주지않고 데이터가 디스크에 암호화 하려면? 데이터 저장에 암호화된 EBS 볼륨을 사용하도록 Amazon EC2 인스턴스 집합을 구성합니다.
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html
+- https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html
+- 개발자는 AWS Lambda 함수로 작성된 프로덕션 분산 애플리케이션의 성능 문제를 분석해야 합니다. AWS X-Ray 를 사용하여 세그먼트 및 오류를 검사하면 됩니다.

@@ -6751,3 +6751,10 @@ Amazon S3 같은 다른 AWS 서비스가
   - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html
 - https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html
 - 개발자는 AWS Lambda 함수로 작성된 프로덕션 분산 애플리케이션의 성능 문제를 분석해야 합니다. AWS X-Ray 를 사용하여 세그먼트 및 오류를 검사하면 됩니다.
+- Amazon API Gateway 뒤에 AWS Lambda 함수를 디버깅하고 있습니다. API Gateway 엔드포인트가 호출될 때마다 AWS Lambda 가 4xx 오류를 기록하더라도 HTTP 상태코드 200 이 반환됩니다.
+  이를 해결하기 위해서 Lambda 프록시 통합을 사용하여 HTTP 코드 및 헤더 반환을 합니다.
+  - https://docs.aws.amazon.com/apigateway/latest/developerguide/handle-errors-in-lambda-integration.html
+- AWS CodeDeploy 배포의 후크 순서
+  - https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html
+- Red Green 패포
+  - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-bluegreen.html
